@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.App {
+  height: 80vw;
+  width: 80vw;
+  display: grid;
+  font-family: sans-serif;
+  text-align: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "a a b b c"
+    "a a b b c"
+    "d d b b c"
+    "e e f g g"
+    "e e f g g";
+}
+
+div {
+  padding: 5px;
+}
+
+.bedroom {
+  background-color: cadetblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#bed-1 {
+  grid-area: a;
+}
+#bed-2 {
+  grid-area: e;
+}
+#bed-3 {
+  grid-area: g;
+}
+.livingroom {
+  background-color: khaki;
+  grid-area: b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bath {
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#bath-Full {
+  grid-area: d;
+}
+#bath-Half {
+  grid-area: f;
+}
+.kitchen {
+  grid-area: c;
+  background-color: orange;
+  display: grid;
+  grid-template-rows: subgrid;
+}
+.oven {
+  grid-area: 1/1;
+  background-color: orangered;
+  height: 20%;
+}
+.sink {
+  grid-area: 1/2;
+  height: 20%;
+  background-color: peru;
+}
